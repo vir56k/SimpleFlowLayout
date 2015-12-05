@@ -24,4 +24,8 @@ local.properties
 proguard/
 
 # Log Files
+<<<<<<< HEAD
 *.log
+=======
+*.log
+>>>>>>> 6e89c89668c2c9ca246869f78642a4af17af3216

@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         TextView view;
 
         view = createView("一");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("二二");
         simpleFlowLayout.addView(view, lp);

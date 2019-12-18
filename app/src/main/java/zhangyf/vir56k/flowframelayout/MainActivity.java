@@ -1,5 +1,6 @@
 package zhangyf.vir56k.flowframelayout;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,25 +12,15 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    SimpleFlowLayout simpleFlowLayout;
-    ViewGroup.MarginLayoutParams lp;
+    FlowLayout simpleFlowLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        simpleFlowLayout = (SimpleFlowLayout) findViewById(R.id.simpleFlowLayout);
+        simpleFlowLayout = (FlowLayout) findViewById(R.id.simpleFlowLayout);
 
-        lp = new ViewGroup.MarginLayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-
-        int margin = 5;
-
-        lp.leftMargin = margin;
-        lp.rightMargin = margin;
-        lp.topMargin = margin;
-        lp.bottomMargin = margin;
 
         Random random = new Random();
         TextView view;
@@ -38,34 +29,34 @@ public class MainActivity extends AppCompatActivity {
         simpleFlowLayout.addView(view);
 
         view = createView("二二");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("三三三");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("四四四四");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("五五五五五");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("一二三四五六七八九n");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("一二三四五六七八九零一二三");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("一二三四五六七八九零一二三四五六七八九");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("一二三四五");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("一二三四五六七八九零一二三");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("一二三四五六七八九零一二三四五六七八九");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
         for (int i = 0; i < 15; i++) {
             String word = "";
             int count = random.nextInt(10);
@@ -73,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 word += "字";
             }
             view = createView(word);
-            simpleFlowLayout.addView(view, lp);
+            simpleFlowLayout.addView(view);
         }
     }
 
@@ -81,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         TextView view = new TextView(MainActivity.this);
         view.setText(str.trim());
         view.setTextSize(16);
+        view.setBackgroundColor(Color.parseColor("#FF0000"));
         return view;
     }
 
@@ -90,37 +82,37 @@ public class MainActivity extends AppCompatActivity {
 
 
         view = createView("一");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("二二");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("三三三");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("四四四四");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("五五五五五");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("一二三四五六七八九");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("一二三四五六七八九零一二三");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("一二三四五六七八九零一二三四五六七八九");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("一二三四五六七八九");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("一二三四五六七八九零一二三");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
 
         view = createView("一二三四五六七八九零一二三四五六七八九");
-        simpleFlowLayout.addView(view, lp);
+        simpleFlowLayout.addView(view);
     }
 
 }
